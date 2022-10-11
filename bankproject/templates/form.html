@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        form{width:100%;height:100%;font-size:16px;background-color:paleturquoise;
+        margin-right:8px;padding:20px;box-sizing:border-box;
+        border-radius:10px;}
+        label{width:100px; display:inline-block;}
+     header{width:100%;background-color:darkmagenta;font-size:40px;color:black;margin-right:8px;}
+</style>
+
+</head>
+<body>
+<header > <center>APPLICATION FORM</center></header>
+<form  action="" method="post"><CENTER>
+   {% csrf_token %}
+    <label>FirstName</label>
+    <input type="text" name="name"><br>
+    <label>Lastname</label>
+    <input type="text" name="lastname"><br>
+     <label>Date of Birth</label>
+    <input type="date" name="dob"><br>
+    <label>Age</label>
+    <input type="number" name="age"><br>
+    <label>Gender</label>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female<br>
+    <label>Phone Number</label>
+    <input type="number" name="phonenumber"><br>
+    <label>EMail.Id</label>
+    <input type="email" name="email"><br>
+    <label>Address</label>
+    <textarea rows="2" cols="20"></textarea><br>
+    <label>District</label>
+    <select name="district">
+      <option value="palakkad">Palakkad</option>
+      <option value="Thrissur">Thrissur</option>
+      <option value="Kollam">Kollam</option>
+      <option value="Kottayam">Kottayam</option>
+      <option value="idukki">Idukki</option>
+      <option value="wayanad">Wayanad</option>
+      <option value="Thiruvanathapuram">Thiruvanathapuram</option>
+      <option value="kozhikode">Kozhikode</option>
+      <option value="kannur">Kannur</option>
+      <option value="kasargode">Kasargode</option>
+      <option value="malappuram">Malapuram</option>
+  </select><br>
+    <label>Branch</label>
+    <select name="branch">
+          <option value="b">_select_</option>
+        <option value="palakkad">Palakkad</option>
+      <option value="ernakulam">Ernakulam</option>
+      <option value="Madurai">Madurai</option>
+      <option value="chennai">Chennai</option>
+      <option value="Kottayam">Kottayam</option>
+    </select><br>
+    <label>Account Type</label>
+    <select name="account type">
+          <option value="c">_select_</option>
+        <option value="savings">Savings account</option>
+      <option value="current">Current account</option>
+
+    </select><br>
+<label >Materials Provide</label>
+    <input type="checkbox" name="Debit card">Debit Card
+      <input type="checkbox" name="Credit card" >Credit card
+      <input type="checkbox" name="cheque" >Cheque book<br>
+    <input type="submit">
+    <a href="{% url 'bankapp:logout' %}"><button type="button" >LOGOUT</button></a>
+    </CENTER>
+</form>
+</body>
+</html>

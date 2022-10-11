@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        h1{padding:10px;}
+        form{background-color:pink;padding:20px;box-sizing:border-box;border-size:5px;}
+    </style>
+</head>
+<body>
+<form  method="post"><center>
+    {% csrf_token %}
+    <h1 ><center>LOGIN</center></h1>
+    <input type="text" name="username" placeholder="enter your name"><br>
+    <input type="password" name="password" placeholder="enter your password"><br>
+    <input type="submit"><br>
+    <a href="{% url 'bankapp:register' %}">Register here</a>
+
+</center>
+</form>
+</body>
+</html>
